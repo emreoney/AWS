@@ -5,16 +5,16 @@
 ## What is AWS IAM?
 AWS Identity and Access Management (IAM) is a service that helps yousecurely control access to AWS resources. It allows you to manage who canaccess your AWS services and resources, what actions they can perform, andunder what conditions.
 
-How I'm using AWS IAM in this project
+## How I'm using AWS IAM in this project
 I've created an IAM Group which allows to make everything about EC2's whichhave development tag. After that, I've created an user to test my policy.
 
-Tags
+## Tags
 In real life, there might be many instance in your instances page. Tags helps usto categorize our instances. For example, you can just see the instances whichare working in production and development.
 The tag I’ve used on my EC2 instances is called Env. The value I’ve assignedfor my instances are Production and Development
 ![image](https://github.com/user-attachments/assets/dfe7d0cc-1a43-4413-9fa8-e16433626725)
 
 
-IAM Policies
+## IAM Policies
 IAM Policies are rule set for our resources in AWS. We can set that "Who canaccess to my resources and What he can do" with IAM.
 
 The policy I set up
