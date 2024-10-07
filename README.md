@@ -2,7 +2,7 @@
 
 # IAM
 
-What is AWS IAM?
+## What is AWS IAM?
 AWS Identity and Access Management (IAM) is a service that helps yousecurely control access to AWS resources. It allows you to manage who canaccess your AWS services and resources, what actions they can perform, andunder what conditions.
 
 How I'm using AWS IAM in this project
@@ -21,34 +21,8 @@ The policy I set up
 For this project, I’ve set up a policy using JSON. It is allowed to start, terminate or something else about EC2, but you can do it ifthe EC2 has tag "development".
 
 My JSON Policy:
-{    
-  "Version": "2012-10-17",    
-  "Statement": [        
-    {            
-      "Effect": "Allow",            
-      "Action": "ec2:*",            
-      "Resource": "*",            
-      "Condition": {                
-        "StringEquals": {                    
-          "ec2:ResourceTag/Env": "development"                
-        }            
-      }        
-    },        
-    {            
-      "Effect": "Allow",            
-      "Action": "ec2:Describe*",            
-      "Resource": "*"        
-    },        
-    {            
-      "Effect": "Deny",            
-      "Action": [                
-        "ec2:DeleteTags",                
-        "ec2:CreateTags"            
-      ],            
-      "Resource": "*"        
-    }    
-  ] 
-}
+![image](https://github.com/user-attachments/assets/dfee85ec-cf92-43e6-9873-4ad16d9dfc49)
+
 
 
 I created an user group and attached the policy this user group. Then, I created an user and attached him to user group which I created.
