@@ -79,7 +79,7 @@ Stopping the development instance
 
 File Object is a data storage system.
 
-Advantages over EBS:
+#### Advantages over EBS:
 
 - Flexible structure. As the file size increases, the size of EFS increases, and as the file size decreases, the size of EFS decreases.
 - It can be accessed by more than one machine at the same time.
@@ -89,6 +89,7 @@ The logic of operation is as follows:
 
 For example, we have 2 virtual servers. These servers are entered and a folder with the name we want is created. For example, we created a folder named efs in 2 servers. Then these folders are mounted with the efs drive. After this process is done, everything written, added, etc. to the efs folders in the servers is also added to the efs drive.
 
+#### AWS Example:
 
 1- I connect to my first virtual server and create a folder named efs in it.
 
