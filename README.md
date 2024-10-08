@@ -69,7 +69,10 @@ For example, we have 2 virtual servers. These servers are entered and a folder w
 
 
 2- I install amazon-efs-utils into the server. 
+```bash
 sudo yum install amazon-efs-utils
+```
+
 
 3- I mount the efs folder with the efs drive. To get the mount command, you must enter the EFS you created in AWS and press the attach button.
 
