@@ -23,9 +23,36 @@ For this project, I’ve set up a policy using JSON. It is allowed to start, ter
 
 My JSON Policy:
 
-![image](https://github.com/user-attachments/assets/dfee85ec-cf92-43e6-9873-4ad16d9dfc49)
-
-
+```bash
+{    
+  "Version": "2012-10-17",    
+  "Statement": [        
+    {            
+      "Effect": "Allow",            
+      "Action": "ec2:*",            
+      "Resource": "*",            
+      "Condition": {                
+        "StringEquals": {                    
+          "ec2:ResourceTag/Env": "development"                
+        }            
+      }        
+    },        
+    {            
+      "Effect": "Allow",            
+      "Action": "ec2:Describe*",            
+      "Resource": "*"        
+    },        
+    {            
+      "Effect": "Deny",            
+      "Action": [                
+        "ec2:DeleteTags",                
+        "ec2:CreateTags"            
+      ],            
+      "Resource": "*"        
+    }    
+  ] 
+}
+```
 
 I created an user group and attached the policy this user group. Then, I created an user and attached him to user group which I created.
 
